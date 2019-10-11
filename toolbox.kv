@@ -1,0 +1,42 @@
+<ToolButton@ToggleButton>:
+    size_hint: None, None
+    width: 48
+    height: 48
+    group: "tool"
+    canvas:
+        PushMatrix:
+        Translate:
+            xy: self.x, self.y
+    canvas.after:
+        PopMatrix:
+
+<ToolBox@GridLayout>:
+    cols: 2
+    padding: 2
+    ToolButton:
+        canvas:
+            Ellipse:
+                size:12,12
+                pos:14,14
+                angle_start: 120
+                angle_end: 420
+    ToolButton:
+        canvas:
+            Ellipse:
+                size:12,12
+                pos:14,14
+    ToolButton:
+        canvas:
+            Color: 
+                rgba: 1,0,0,1
+            Line:
+                circle: 24, 38, 5
+            Line:
+                points: 24,33, 24,15
+            Line:
+                points: 14,5, 24,15
+            Line:
+                points: 34,5, 24,15
+            Line:
+                points: 14,24, 34,24
+    

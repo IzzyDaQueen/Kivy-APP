@@ -1,0 +1,82 @@
+<MyLayout>:
+    
+    AnchorLayout:
+        anchor_x:"left"
+        anchor_y:"top"
+        ToolBox:
+            id: _tool_box
+            drawing_space: _drawing_space
+            size_hint: None,None
+            m yApp: root
+
+            width: 100
+    AnchorLayout:
+        anchor_x:"left"
+        anchor_y:"top"
+        DrawingSpace:
+            id: _drawing_space
+            status_bar: _status_bar
+            general_options: _general_options
+            tool_box: _tool_box
+            size_hint: None,None
+            width: root.width - _tool_box.width
+            height: root.height - _general_options.height - _status_bar.height
+    AnchorLayout:
+        anchor_x:"center"
+        anchor_y:"bottom"
+        BoxLayout:
+            orientation:"vertical"
+            GeneralOptions:
+                id: _general_options
+                drawing_space: _drawing_space
+                size_hint: 1, None
+                hieght: 48
+            StatusBar:
+                id:_status_bar
+                size_hint: 1, None
+                height: 24
+
+
+
+
+# <MyLayout>:
+#     rows:2
+#     FloatLayout:
+#         Button:
+#             text: "Button 1"
+#             size_hint: 0.1,0.2
+#             pos_hint: {"center_x": 0.5, "center_y": 0.5}
+#     FloatLayout:
+#         Button:
+#             text: "Button 2"
+#             size_hint: 0.1,0.3
+#             pos: 350,250
+#     RelativeLayout:
+#         Button:
+#             text:"Button 3"
+#             size_hint: 0.1, 0.3
+#             pos_hint: {"right":1, "top": 1}
+#     RelativeLayout:
+#         Button:
+#             text:"Button 4"
+#             size_hint: 0.6, 0.6
+#             pos: 0,0
+#     GridLayout:
+#         cols: 3
+#         spacing:10
+#         Button:
+#             text: "Button 5"
+#         Button:
+#             text: "Button 6"
+#         Button:
+#             text: "Button 7"
+#     BoxLayout:
+#         orientation: "horizontal"
+#         Button:
+#             text: "Button 8"
+#         Button:
+#             text: "Button 9"
+#             size_hint: 2, 0.3
+#             pos_hint: {"y":0.4}
+#         Button:
+#             text: "Button 10"
